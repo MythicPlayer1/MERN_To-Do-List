@@ -1,0 +1,24 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+  
+}
+.header{
+    height:100px;
+    width: 100%;
+    background-color: rgb(41, 108, 232);
+    color: white;
+    text-align: center;
+}
+
+.sub-container2{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+ 
+    gap:1px;
+    padding: 10px;
+    
+
+}

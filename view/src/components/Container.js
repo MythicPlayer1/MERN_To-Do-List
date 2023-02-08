@@ -1,8 +1,8 @@
-import { Button } from '@mui/material'
+
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNotificationsOutlinedIcon from '@mui/icons-material/EditNotificationsOutlined';
 import React, { useState } from 'react'
-import './Container.css'
+import './Container.css';
 
 export const Container = () => {
   const [NewText, setNewText] = useState();
@@ -13,15 +13,18 @@ export const Container = () => {
   }
 
   const submithandler = (event) => {
-   
       event.preventDefault();
-      const data={
-        submit: NewText
-      }
-      console.log(data)
+      // const data={
+      //   submit:NewText,
+      //   string:'ITem added'
+      // }
+      // console.log(data)
+      
+      setSubmit(NewText)
+  
       setNewText(" ");
-      setSubmit(" ")
   }
+  console.log(submit)
   return (
     <div className='container'>
       <label></label>

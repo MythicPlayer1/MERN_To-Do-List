@@ -2,18 +2,15 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(241, 241, 241);
+    overflow-x: hidden;
 
-    
-  
 }
 .header{
     height:75px;
     width: 100%;
     background-color: rgb(41, 108, 232);
     color: white;
-    text-align: center;
-   
-   
+    text-align: center; 
 }
 
 .sub-container2{
@@ -29,7 +26,10 @@
 .innerSub-container2{
     display: flex;
     flex-direction: column;
-  
     margin-top: 7px;
-
+}
+.sub-container4{
+    height:400px;
+    width:100%;
+    background:yellow ;
 }

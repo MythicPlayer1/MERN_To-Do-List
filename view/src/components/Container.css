@@ -1,19 +1,22 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    padding-left:25px ;
+    padding-left: 25px;
     padding-right: 25px;
-    height:120px ;
+    height: 120px;
 }
 
- .input-txt{
+.input-txt {
     height: 50px;
     background-color: white;
     border: none;
-    border-bottom: 2px solid rgba(115, 114, 114, 0.2);;
+    border-bottom: 2px solid rgba(115, 114, 114, 0.2);
+    text-transform: capitalize;
+    
 
 }
-.sub-container-1{
+
+.sub-container-1 {
     display: flex;
     justify-content: space-between;
     height: 50px;
@@ -21,20 +24,35 @@
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 5px 0px rgba(72, 72, 72, 0.1);
-    
-    
+
+
 }
-.inner-container-1{
+
+.inner-container-1 {
     display: flex;
     width: 100px;
     justify-content: space-evenly;
 }
 
-.Button{
+.Button {
     margin-right: 15px;
     height: 35px;
     width: 50px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background: white;
 
+}
+
+/* Lists CSS..................................................... */
+
+
+.list-input {
+
+    height: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: rgb(239, 252, 255);
+    border: none;
+    width: 96.5%;
+    border-bottom: 2px solid rgba(115, 114, 114, 0.2);
 }

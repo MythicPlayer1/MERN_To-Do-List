@@ -5,8 +5,20 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import './main.css'
 
 import { Lists } from '../components/Lists';
-const Main = () => {
+import { useState } from 'react';
 
+
+const Main = () => {
+    const [datas, setNewDatas]=useState()
+    
+    const savedata=(saveddata)=>{
+       
+      
+        setNewDatas(saveddata); 
+    }
+    console.log(datas)
+
+   
     return (
         <div className='main-container'>
             <div className='header'><h2>To-Do-List</h2></div>
@@ -17,10 +29,11 @@ const Main = () => {
                     <p style={{ fontSize: '10px' }}>Monday, Febrary 7</p>
                 </div>
             </div>
-            <Container ></Container>
+            <Container senddata={savedata}></Container>
             <div className='sub-container4'>
-                <Lists></Lists>
+                <Lists todolists={datas}></Lists>
             </div>
+
 
         </div>
     );

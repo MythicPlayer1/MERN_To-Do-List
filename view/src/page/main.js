@@ -18,6 +18,7 @@ const Main = () => {
     }
     console.log(datas)
 
+  
    
     return (
         <div className='main-container'>

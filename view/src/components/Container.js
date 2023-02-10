@@ -3,6 +3,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNotificationsOutlinedIcon from '@mui/icons-material/EditNotificationsOutlined';
 import React, { useState } from 'react'
 import './Container.css';
+import axios from 'axios'
 
 export const Container = (props) => {
   const [NewText, setNewText] = useState();
@@ -12,14 +13,22 @@ export const Container = (props) => {
     setNewText(event.target.value);
   }
 
-  const submithandler = (event) => {
+  const submithandler =async (event) => {
       event.preventDefault();
+      try {
+        await axios.post("http://localhost:5600/post_name",{
+            NewText
+        })
+        
+    } catch (error) {
+        console.log(error)
+        
+    }
 
       props.senddata(NewText);
       setNewText(" ")
       
   }
- 
   return (
     <div className='container'>
       <form onSubmit={submithandler} style={{width:"100%"}}>

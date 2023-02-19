@@ -5,7 +5,7 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import './main.css'
 
 import { Lists } from '../components/Lists';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const Main = () => {
@@ -13,10 +13,20 @@ const Main = () => {
     
     const savedata=(saveddata)=>{
        
+       
       
-        setNewDatas(saveddata); 
+        setNewDatas(datas); 
     }
     console.log(datas)
+    const getApi=async()=>{
+    const response= await fetch('http://localhost:5600/api/get').then((response)=>response.json())
+    console.log(response)
+       
+    }
+    useEffect(()=>{
+        getApi()
+
+    },[]);
 
   
    

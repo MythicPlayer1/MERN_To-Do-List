@@ -9,25 +9,27 @@ import { useEffect, useState } from 'react';
 
 
 const Main = () => {
-    const [datas, setNewDatas]=useState()
+    const [datas, setNewDatas]=useState("");
+    const [dbdatas,setDbdatas]=useState([]);
     
     const savedata=(saveddata)=>{
+        setNewDatas(saveddata)
+        const arry=[...dbdatas,datas]
        
-       
-      
-        setNewDatas(datas); 
+        setNewDatas(arry); 
+        
     }
-    console.log(datas)
+   
     const getApi=async()=>{
     const response= await fetch('http://localhost:5600/api/get').then((response)=>response.json())
-    console.log(response)
+   
+    setDbdatas(response)
        
     }
     useEffect(()=>{
-        getApi()
+        getApi();
 
     },[]);
-
   
    
     return (
@@ -40,10 +42,19 @@ const Main = () => {
                     <p style={{ fontSize: '10px' }}>Monday, Febrary 7</p>
                 </div>
             </div>
-            <Container senddata={savedata}></Container>
+            <Container senddata={savedata} 
+                        apifetch={getApi}></Container>
             <div className='sub-container4'>
-                <Lists todolists={datas}></Lists>
+                {/* <Lists item={dbdatas}></Lists> */}
+               {
+                   dbdatas.map((item)=>(
+                       <Lists
+                       item={item}
+                       ></Lists>
+                   ))
+               }
             </div>
+          
 
 
         </div>

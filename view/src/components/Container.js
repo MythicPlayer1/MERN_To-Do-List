@@ -1,7 +1,7 @@
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNotificationsOutlinedIcon from '@mui/icons-material/EditNotificationsOutlined';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 
 
@@ -26,8 +26,9 @@ export const Container = (props) => {
       })
 
     })
+    props.apifetch();
     const data = await response.json()
-    console.log(data)
+    
     setNewText(" ")
 
   }

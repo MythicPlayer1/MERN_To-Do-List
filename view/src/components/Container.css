@@ -45,6 +45,10 @@
 }
 
 /* Lists CSS..................................................... */
+.top-main{
+    width: 99%;
+    margin-bottom: 3px;
+}
 
 
 .list-input {
@@ -52,10 +56,12 @@
     height: 50px;
     margin-right: 25px;
     margin-left: 25px;
+    padding-left: 15px;
     background-color: rgb(239, 252, 255);
     border: none;
     width: 96.5%;
     border-bottom: 2px solid rgba(115, 114, 114, 0.2);
     display: flex;
     align-items: center;
+    font-family: monospace;
 }

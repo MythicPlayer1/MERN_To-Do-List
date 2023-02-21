@@ -29,7 +29,15 @@
     margin-top: 7px;
 }
 .sub-container4{
-    height:400px;
+    height: auto;
     width:100%;
+   
 
+}
+
+.hidden-div{
+    width:250px;
+    background: rgb(220, 220, 220);
+    height:auto;
+   
 }

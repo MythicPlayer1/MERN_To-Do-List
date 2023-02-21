@@ -1,6 +1,7 @@
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNotificationsOutlinedIcon from '@mui/icons-material/EditNotificationsOutlined';
+import { IconButton } from '@mui/material';
 import React, { useState } from 'react'
 
 
@@ -9,6 +10,10 @@ export const Container = (props) => {
   const [NewText, setNewText] = useState();
   const textchangeHandler = (event) => {
     setNewText(event.target.value);
+  }
+  const timehandler=(event)=>{
+    setNewText(event.target.value)
+
   }
 
   const submithandler = async (event) => {
@@ -28,7 +33,7 @@ export const Container = (props) => {
     })
     props.apifetch();
     const data = await response.json()
-    
+
     setNewText(" ")
 
   }
@@ -39,7 +44,11 @@ export const Container = (props) => {
         <input className='input-txt' type='text' onChange={textchangeHandler} value={NewText} placeholder='Add a text'></input>
         <div className='sub-container-1'>
           <div className='inner-container-1'>
-            <CalendarMonthIcon style={{ color: 'rgb(90, 90, 90)' }}></CalendarMonthIcon>
+            <IconButton>
+              <input type='date' id='date' onchagne={timehandler}></input>
+              <CalendarMonthIcon style={{ color: 'rgb(90, 90, 90)' }}></CalendarMonthIcon>
+            </IconButton>
+
             <EditNotificationsOutlinedIcon style={{ color: 'rgb(90, 90, 90)' }}></EditNotificationsOutlinedIcon>
           </div>
           <button className='Button' >Add</button>

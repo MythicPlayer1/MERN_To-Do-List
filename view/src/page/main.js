@@ -30,6 +30,8 @@ const Main = () => {
         getApi();
 
     },[]);
+
+    console.log(dbdatas)
   
    
     return (
@@ -50,6 +52,7 @@ const Main = () => {
                    dbdatas.map((item)=>(
                        <Lists
                        item={item}
+                       apifetch={getApi}
                        ></Lists>
                    ))
                }

@@ -7,7 +7,16 @@ import { IconButton } from '@mui/material';
 
 export const Lists = (props) => {
 
-  const deletehandler=()=>{
+  console.log(props)
+  const deletehandler= async ()=>{
+    let result= await fetch("http://localhost:5600/delete/"+props.item._id,{
+      method:"DELETE"
+    });
+    result=await result.json();
+    props.apifetch()
+
+     
+    console.log(result)
 
   }
 

@@ -30,6 +30,12 @@ app.post('/post_name', async (req, resp) => {
     }
 })
 
+app.delete('/delete/:_id',async (req, resp)=>{
+    console.log(req.params)
+    let data =await schemas.deleteOne(req.params);
+    resp.send(data)
+})
+
 const start = async () => {
     try {
         await dbconnect()
